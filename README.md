@@ -20,6 +20,13 @@ Place this in your .vimrc:
 Plugin 'codable/diffreview'
 ```
 
+Config
+-----
+default split window show diff，you can put follow in your .vimrc, will vsplit window.
+```
+let g:ReviewDiffCommand = "Gvdiffsplit"
+```
+
 Usage
 -----
 
