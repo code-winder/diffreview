@@ -5,6 +5,7 @@ nmap ]q :cnext<CR>
 let g:ReviewStarted = 0
 let g:ReviewChangeList = []
 let g:ReviewBaseFilename = ''
+let g:ReviewDiffCommand = 'Gdiff'
 
 augroup AutoReview
   autocmd!
@@ -16,9 +17,9 @@ function! s:ReviewGdiff(timer)
     return
   endif
   if g:ReviewBaseFilename == ''
-    :execute 'Gdiff ' . g:ReviewRef
+    :execute g:ReviewDiffCommand .' ' . g:ReviewRef
   else
-    :execute 'Gdiff ' . g:ReviewRef . ':' . g:ReviewBaseFilename
+    :execute g:ReviewDiffCommand .' ' . g:ReviewRef . ':' . g:ReviewBaseFilename
   endif
 endfunction
 
