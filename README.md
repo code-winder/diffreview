@@ -17,7 +17,7 @@ Installation
 Place this in your .vimrc:
 
 ```
-Plugin 'codable/diffreview'
+Plugin 'code-winder/diffreview'
 ```
 
 Config
